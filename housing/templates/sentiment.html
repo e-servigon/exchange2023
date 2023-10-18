@@ -70,82 +70,45 @@
         </div>
     </header>
 
-    <!-- testimonial section -->
-    <div id="testimonial" class="testimonial">
+    <!-- service section -->
+    <div class="service">
         <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage">
-                    <h2><img src="{% static 'images/heading_icon.png' %}" alt="#"/>Housing App</h2>
-                </div>
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="titlepage">
+                    <h2><img src="{% static 'images/heading_icon.png' %}" alt="#"/><span class="yellow">Sentiment Analysis</span> <br> <span class="appp_l">Proceso de Analisis de Sentimiento</span></h2>
+                    <p>Escribe en la siguiente caja de texto la oracion que requieres para que nos de el sentimiento</p>
+                    <p> {{sentimentresult}} </p>
+                 </div>
+              </div>
+           </div>
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="service_box">
+                    <i><img class= "service_image" src="{% static 'images/translate.png' %}" alt="#"/></i>
+                    <div class="service_text">
+                       <h3> Form Sentimiento </h3>
+                        <form action = "" method = "post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12 ">
+                                    <p>Pon aqui el texto a analizar<p>
+                                    {{analyzeform.text_to_analyze}}
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-md-12">
+                                <button class="send_btn">Analizar Sentimiento</button>
+                            </div>
+                       </form>
+                    </div>
+                 </div>
+              </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <div id="myCarousel" class="carousel slide testimonial_Carousel " data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container">
-                            <div class="carousel-caption ">
-                                <div class="row">
-                                <div class="col-md-12">
-                                    <div class="testimonial_box">
-                                        <figure><img src="{% static 'images/test.png' %}" alt="#"/></figure>
-                                        <p> Plataforma para poder generar tu intercambio de culturas y poder cruzar fronteras </p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <div class="row">
-                                <div class="col-md-12">
-                                    <div class="testimonial_box">
-                                        <figure><img src="{% static 'images/test.png' %}" alt="#"/></figure>
-                                        <p> Por medio de varios módulos se podran entender diferentes situaciones de la cultura de otros 
-                                            paises y podra ayudarte a mejorar tu experiencia de intercambio. </p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="carousel-caption">
-                                <div class="row">
-                                <div class="col-md-12">
-                                    <div class="testimonial_box">
-                                        <figure><img src="{% static 'images/test.png' %}" alt="#"/></figure>
-                                        <p> Selecciona cualquier de las opciones del menu superior para que puedas arrancar. </p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <i class='fa fa-angle-left'></i>
-                </a>
-                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <i class='fa fa-angle-right'></i>
-                </a>
-            </div>
-        </div>
-        </div>
     </div>
-    </div>
- <!-- end testimonial section -->
+     <!-- end service section -->
 
        <!-- Javascript files-->
     <script src="{% static 'js/jquery.min.js' %}"></script>
